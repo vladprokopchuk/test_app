@@ -1,0 +1,11 @@
+/src/.phpunit.cache
+/src/node_modules
+/src/vendor
+/src/.env
+/src/.env.backup
+/src/.env.production
+/src/.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+/.idea
+/.vscode
