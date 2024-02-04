@@ -9,3 +9,10 @@ Homestead.json
 Homestead.yaml
 /.idea
 /.vscode
+
+/src/.env.local
+/src/.env.local.php
+/src/.env.*.local
+/src/config/secrets/prod/prod.decrypt.private.php
+/src/public/bundles/
+/src/var/
