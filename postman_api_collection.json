@@ -1,0 +1,851 @@
+{
+	"info": {
+		"_postman_id": "b1adc34a-6626-441e-81c7-d8b7ac3d801b",
+		"name": "contest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "199083",
+		"_collection_link": "https://martian-firefly-730601.postman.co/workspace/Leveling~71a530e8-f8b3-469d-931f-4ab2d50601eb/collection/199083-b1adc34a-6626-441e-81c7-d8b7ac3d801b?action=share&source=collection_link&creator=199083"
+	},
+	"item": [
+		{
+			"name": "CREATE PERSON",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Ivan\",\n    \"last_name\": \"Rostov\",\n    \"birthdate\": \"2000-02-23\",\n    \"apartment_id\": 2,\n    \"personal_id_number\": \"gw3fOtmjnv8nJf6s\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:8080/api/person",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"person"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "CREATE PERSON - SUCCESS -CALL",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Ivan\",\n    \"last_name\": \"Pehov\",\n    \"birthdate\": \"2000-02-23\",\n    \"apartment_id\": 2,\n    \"personal_id_number\": \"w3fOtmjnv8nJf6\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:8080/api/person",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"person"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.25.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.3.1"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 05 Feb 2024 18:10:37 GMT"
+						},
+						{
+							"key": "X-Robots-Tag",
+							"value": "noindex"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"person_id\": 5\n}"
+				},
+				{
+					"name": "CREATE PERSON -validation error",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Ivan\",\n    \"last_name\": \"Rostov\",\n    \"birthdate\": \"2000-02-23\",\n    \"apartment_id\": 244,\n    \"personal_id_number\": \"gw3fOtmjnv8nJf6s\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:8080/api/person",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"person"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.25.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.3.1"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 05 Feb 2024 22:49:38 GMT"
+						},
+						{
+							"key": "X-Robots-Tag",
+							"value": "noindex"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": false,\n    \"errors\": [\n        \"Apartment not found\"\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "CREATE HOUSE",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"number\": 4,\n    \"street_name\": \"MOlly street\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:8080/api/house",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"house"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "CREATE HOUSE  SUCCESS CALL",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"number\": 20,\n    \"street_name\": \"Baker street\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:8080/api/house",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"house"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.25.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.3.1"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 05 Feb 2024 08:06:45 GMT"
+						},
+						{
+							"key": "X-Robots-Tag",
+							"value": "noindex"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"house_id\": 1\n}"
+				},
+				{
+					"name": "CREATE HOUSE - validation errors",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"number\": \"\",\n    \"street_name\": \"Bolden street\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:8080/api/house",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"house"
+							]
+						}
+					},
+					"status": "Unprocessable Content",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.25.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.3.1"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 05 Feb 2024 22:50:42 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": false,\n    \"errors\": [\n        {\n            \"property\": \"number\",\n            \"value\": \"\",\n            \"message\": \"Field 'number' should not be blank\"\n        },\n        {\n            \"property\": \"number\",\n            \"value\": \"\",\n            \"message\": \"Field 'street_name' should be integer\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "CREATE APARTMENT",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"number\": 3,\n    \"house_id\": 2\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:8080/api/apartment",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"apartment"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "CREATE APARTMENT - SUCCESS CALL",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"number\": 3,\n    \"house_id\": 1\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:8080/api/apartment",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"apartment"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.25.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.3.1"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 05 Feb 2024 18:09:23 GMT"
+						},
+						{
+							"key": "X-Robots-Tag",
+							"value": "noindex"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"apartment_id\": 2\n}"
+				},
+				{
+					"name": "CREATE APARTMENT - validation error",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"number\": 1,\n    \"house_id\": \"\"\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:8080/api/apartment",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"apartment"
+							]
+						}
+					},
+					"status": "Unprocessable Content",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.25.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.3.1"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 05 Feb 2024 22:51:37 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": false,\n    \"errors\": [\n        {\n            \"property\": \"house_id\",\n            \"value\": \"\",\n            \"message\": \"Field 'house_id' should not be blank\"\n        },\n        {\n            \"property\": \"house_id\",\n            \"value\": \"\",\n            \"message\": \"Field 'house_id' should be integer\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "GET PERSONS LIST",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"apartment_number\": 2,\n    \"birthdate\": \"2001-02-23\",\n    \"name\": \"Anton\",\n    \"last_name\": \"Petrov\",\n    \"house_number\": 2,\n    \"personal_id_number\": \"kmfdk8fgf\",\n    \"street_name\": \"\",\n    \"page\": 1,\n    \"limit\": 1\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:8080/api/person/list",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"person",
+						"list"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GET PERSONS LIST - SUCCESS CALL",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"apartment_number\": 2,\n    \"birthdate\": \"2001-02-23\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:8080/api/person/list",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"person",
+								"list"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.25.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.3.1"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 05 Feb 2024 19:34:01 GMT"
+						},
+						{
+							"key": "X-Robots-Tag",
+							"value": "noindex"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"persons\": [\n        {\n            \"id\": 1,\n            \"name\": \"Kiril\",\n            \"birthdate\": \"2001-02-23T00:00:00+00:00\",\n            \"personal_id_number\": \"dfdfdf5\",\n            \"last_name\": \"Durov\",\n            \"house_number\": 20,\n            \"street_name\": \"Baker street\",\n            \"apartment_number\": 2\n        }\n    ]\n}"
+				},
+				{
+					"name": "GET PERSONS LIST - validation error",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"apartment_number\": 2,\n    \"birthdate\": \"2001-02-23\",\n    \"name\": \"Anton\",\n    \"last_name\": \"Petrov\",\n    \"house_number\": 2,\n    \"personal_id_number\": \"+kmfdk8fgf\",\n    \"street_name\": 2,\n    \"page\": 1,\n    \"limit\": 1\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:8080/api/person/list",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"person",
+								"list"
+							]
+						}
+					},
+					"status": "Unprocessable Content",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.25.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.3.1"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 05 Feb 2024 22:52:28 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": false,\n    \"errors\": [\n        {\n            \"property\": \"personal_id_number\",\n            \"value\": \"+kmfdk8fgf\",\n            \"message\": \"The string must contain only letters and numbers.\"\n        },\n        {\n            \"property\": \"street_name\",\n            \"value\": 2,\n            \"message\": \"Field 'street_name' should be the string\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "GET APARTMENTS LIST",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"person_name\": \"Ivan\",\n        \"person_last_name\": \"Pe\",\n        \"street_name\": \"Baker Street\",\n        \"number\": 3,\n        \"page\": 1,\n        \"limit\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:8080/api/apartment/list",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"apartment",
+						"list"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GET APARTMENTS LIST - SUCCESS CALL",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"person_name\": \"Ivan\",\n        \"person_last_name\": \"Pe\",\n        \"street_name\": \"Baker Street\",\n        \"number\": 3,\n        \"page\": 1,\n        \"limit\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:8080/api/apartment/list",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"apartment",
+								"list"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.25.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.3.1"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 05 Feb 2024 20:07:03 GMT"
+						},
+						{
+							"key": "X-Robots-Tag",
+							"value": "noindex"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"apartments\": [\n        {\n            \"id\": 2,\n            \"number\": 3,\n            \"house\": {\n                \"id\": 1,\n                \"number\": 20,\n                \"street_name\": \"Baker street\"\n            },\n            \"people\": [\n                {\n                    \"id\": 5,\n                    \"name\": \"Ivan\",\n                    \"last_name\": \"Pehov\",\n                    \"birthdate\": \"2000-02-23T00:00:00+00:00\",\n                    \"personal_id_number\": \"w3fOtmjnv8nJf6\"\n                }\n            ]\n        }\n    ]\n}"
+				},
+				{
+					"name": "GET APARTMENTS LIST - validation error",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"person_name\": \"Ivan\",\n        \"person_last_name\": \"Pe\",\n        \"street_name\": \"Baker Street\",\n        \"number\": \"dd\",\n        \"page\": 1,\n        \"limit\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:8080/api/apartment/list",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"apartment",
+								"list"
+							]
+						}
+					},
+					"status": "Unprocessable Content",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.25.2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.3.1"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 05 Feb 2024 22:53:33 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": false,\n    \"errors\": [\n        {\n            \"property\": \"number\",\n            \"value\": \"dd\",\n            \"message\": \"Field 'number' should be integer\"\n        }\n    ]\n}"
+				}
+			]
+		}
+	]
+}

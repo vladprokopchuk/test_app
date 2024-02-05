@@ -33,4 +33,7 @@ RUN groupmod -o -g ${PGID} www-data && \
 RUN chown -R www-data:www-data /var/www/html/
 RUN chmod -R 775 /var/www/html/
 
+RUN echo "#######################################"
+RUN echo "DONE"
+RUN echo "#######################################"
 

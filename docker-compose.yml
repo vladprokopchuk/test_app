@@ -17,6 +17,7 @@ services:
         build: docker/php-fpm
         volumes:
             - ./src:/var/www/html
+        user: "1000:1000"
     db:
         image: mysql:5.7
         environment:
@@ -24,3 +25,9 @@ services:
             MYSQL_DATABASE: 'contest'
             MYSQL_USER: 'db_user'
             MYSQL_PASSWORD: 'db_user_pass'
+        volumes:
+            - db1_volume:/var/lib/mysql
+        ports:
+            - "3336:3306"
+volumes:
+    db1_volume:

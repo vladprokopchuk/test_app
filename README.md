@@ -100,3 +100,15 @@
 12. **<span style="color:#4dbf71">Add all the necessary instructions to php-fpm Dockerfile to launch this web app from scratch on other work machine - it should work on any other machine that supports Docker</span>**
 13. **<span style="color:#4dbf71">If your project requires any explanations or additional instructions to launch a project - add those instructions as new sections below</span>**
 
+# Installation APP
+
+1. **<span style="color:#4dbf71">Clone repository:</span>**
+3. **<span style="color:#4dbf71">Copy /src/.env.example file to /src/.env </span>**
+4. **<span style="color:#4dbf71">run docker compose up </span>**
+5. **<span style="color:#4dbf71">run composer install inside php-fpm container</span>**
+6. **<span style="color:#4dbf71">run bin/console make:migration inside php-fpm container</span>**
+7. **<span style="color:#4dbf71">run bin/console doctrine:migrations:migrate inside php-fpm container</span>**
+8. **<span style="color:#4dbf71">run docker compose down </span>**
+9. **<span style="color:#4dbf71">run docker compose build  </span>**
+10. **<span style="color:#4dbf71">run docker compose up -d  </span>**
+11. **<span style="color:#4dbf71">To test API use /postman_api_collection.json to import API collection to Postman and then test api endpoints  </span>**
