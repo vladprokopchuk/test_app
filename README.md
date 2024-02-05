@@ -102,13 +102,12 @@
 
 # Installation APP
 
-1. **<span style="color:#4dbf71">Clone repository:</span>**
+1. **<span style="color:#4dbf71">Clone repository: https://github.com/vladprokopchuk/test_app.git </span>**
 3. **<span style="color:#4dbf71">Copy /src/.env.example file to /src/.env </span>**
 4. **<span style="color:#4dbf71">run docker compose up </span>**
 5. **<span style="color:#4dbf71">run composer install inside php-fpm container</span>**
-6. **<span style="color:#4dbf71">run bin/console make:migration inside php-fpm container</span>**
-7. **<span style="color:#4dbf71">run bin/console doctrine:migrations:migrate inside php-fpm container</span>**
-8. **<span style="color:#4dbf71">run docker compose down </span>**
-9. **<span style="color:#4dbf71">run docker compose build  </span>**
-10. **<span style="color:#4dbf71">run docker compose up -d  </span>**
-11. **<span style="color:#4dbf71">To test API use /postman_api_collection.json to import API collection to Postman and then test api endpoints  </span>**
+6. **<span style="color:#4dbf71">run bin/console doctrine:migrations:migrate inside php-fpm container</span>**
+7. **<span style="color:#4dbf71">run docker compose down </span>**
+8. **<span style="color:#4dbf71">run docker compose build  </span>**
+9. **<span style="color:#4dbf71">run docker compose up -d  </span>**
+10. **<span style="color:#4dbf71">To test API use /postman_api_collection.json to import API collection to Postman and then test api endpoints  </span>**
